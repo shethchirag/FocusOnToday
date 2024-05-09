@@ -132,6 +132,44 @@ h1 span {
   color: #48a300;
   text-decoration-line: line-through;
 }
+
+.sub_title {
+  position: relative;
+  overflow: hidden;
+}
+.sun {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 50px;
+}
+.sun_icon {
+  position: absolute;
+  top: 49%;
+  left: 36%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  animation: rotateSun 10s linear infinite; /* Adjust animation duration as needed */
+}
+.sun_icon-face {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sub_title > span {
+  flex-grow: 0;
+  vertical-align: top;
+}
+@keyframes rotateSun {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 38px;
